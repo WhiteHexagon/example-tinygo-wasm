@@ -124,13 +124,13 @@ func main() {
 		ctx.Call("fillRect", tx, ty, tw, th)
 
 		//frames
-		ctx.Set("lineWidth", .5)
-		ctx.Set("fillStyle", white)
-		ctx.Set("font", font)
-		frameSB.Reset()
-		frameSB.WriteString(framePrefix)
-		frameSB.WriteString(strconv.Itoa(frames))
-		ctx.Call("fillText", frameSB.String(), tx+20, ty+20)
+		// ctx.Set("lineWidth", .5)
+		// ctx.Set("fillStyle", white)
+		// ctx.Set("font", font)
+		// frameSB.Reset()
+		// frameSB.WriteString(framePrefix)
+		// frameSB.WriteString(strconv.Itoa(frames))
+		// ctx.Call("fillText", frameSB.String(), tx+20, ty+20)
 
 		//draw lines
 		ctx.Set("lineWidth", 1)
