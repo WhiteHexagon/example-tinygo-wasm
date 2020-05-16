@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-store, must-revalidate" />
+    <title>TinyGo WASM Stars</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <style>
+        body {
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+    <script src="main.js"></script>
+</head>
+<body id="body">
+    <script>
+        const go = new Go();
+        WebAssembly.instantiateStreaming(fetch('main.wasm'), go.importObject).then(function (obj) {
+		go.run(obj.instance);
+	})
+    </script>
+    <div id="app" />
+</body>
+
+</html>
